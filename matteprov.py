@@ -1,21 +1,27 @@
 import random
 
-print("Matteprovet börjar här.")
+print("Multiplikation")
+
 score = 0
+ratt_svar_i_rad = 0
+print("Vilken tabell vill du öva på?")
+siffra = int(input()) # int()
 
-while True:
-    n = random.randint(0, 10)
-    m = random.randint(0,10)
+while score < 10:
+    annanSiffra = random.randint(0,10)
+    svar = siffra * annanSiffra
 
-    print("Vad är", n, "plus", m)
-    svar = int(input())
-    if svar == -1:
-        break
-    if svar == n + m:
-        print("Rätt!")
-        score += 1  # score = score + 1
+    print(siffra, " * ", annanSiffra, " = ")
+    spelarens_svar = int(input())  # Vaddå int?
+
+    if svar == spelarens_svar:
+        print("Rätt! DU ÄR BRA!")
+        score = score + 1
+        ratt_svar_i_rad = ratt_svar_i_rad + 1
     else:
         print("Fel!")
-        print("Rätt svar är:", n + m)
-    print("Dina poäng:", score)
-print("Matteprovet slutar här.")
+        ratt_svar_i_rad = 0
+
+    print("Du har", score, "poäng")
+
+print("Provet är slut. Du fick ", ratt_svar_i_rad, " i rad.")
