@@ -4,7 +4,7 @@ print("Vad vill du öva på?")
 
 raknesatt = input() 
 if raknesatt == "plus":
-    print("Inte färdigt")
+
 
    
 if raknesatt == "multiplikation":
@@ -22,3 +22,12 @@ if raknesatt == "multiplikation":
 
     if svar == spelarens_svar:
         print("Rätt! DU ÄR BRA!")
+        score = score + 1
+        ratt_svar_i_rad = ratt_svar_i_rad + 1
+    else:
+        print("Fel!")
+        ratt_svar_i_rad = 0
+
+    print("Du har", score, "poäng")
+    
+    print("Provet är slut. Du fick ", ratt_svar_i_rad, " i rad.")
